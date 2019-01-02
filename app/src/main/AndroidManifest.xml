@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="io.github.manuelernesto.thejourneyoffirebase">
 
-
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -12,6 +11,15 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity
+                android:name=".controller.ListOfSubscribersActivity"
+                android:label="@string/title_activity_list_of_subscribers"
+                android:parentActivityName=".controller.MainActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="io.github.manuelernesto.thejourneyoffirebase.controller.MainActivity"/>
+        </activity>
         <activity android:name=".controller.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

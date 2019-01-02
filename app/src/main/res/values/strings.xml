@@ -6,4 +6,8 @@
     <string name="e_mail">E-mail</string>
     <string name="phone">Phone</string>
     <string name="firebase_logo">Firebase Logo</string>
+    <string name="title_activity_list_of_subscribers">ListOfSubscribersActivity</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
 </resources>

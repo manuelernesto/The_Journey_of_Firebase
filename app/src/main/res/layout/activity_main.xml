@@ -74,7 +74,7 @@
             android:text="@string/subscribe"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCad"
+            android:id="@+id/btn_subscribe"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
@@ -89,10 +89,11 @@
             android:text="@string/see_subscribers"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnList" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btn_see_subscribe" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <ImageView
+
             android:src="@mipmap/firebase"
             android:layout_width="0dp"
             android:layout_height="171dp"
@@ -102,5 +103,16 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp" android:scaleType="fitCenter"
             android:contentDescription="@string/firebase_logo"/>
+    <ProgressBar
+            android:visibility="gone"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/progressBar" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"/>
 
 </android.support.constraint.ConstraintLayout>
