@@ -44,11 +44,7 @@ class ListOfSubscribersActivity : AppCompatActivity() {
         val personOption = FirebaseRecyclerOptions.Builder<Person>()
             .setQuery(personQuery, Person::class.java).build()
 
-        personOption
-
         viewHolder = PersonRecyclerAdapter(options = personOption, context = this)
-
-
         rv.adapter = viewHolder
     }
 

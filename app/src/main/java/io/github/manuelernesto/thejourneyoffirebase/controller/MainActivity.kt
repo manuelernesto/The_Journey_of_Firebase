@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.google.firebase.database.*
 import io.github.manuelernesto.thejourneyoffirebase.R
 import io.github.manuelernesto.thejourneyoffirebase.model.Person
+import kotlinx.android.synthetic.main.activity_firestore.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -62,6 +63,10 @@ class MainActivity : AppCompatActivity() {
         btn_see_subscribe.setOnClickListener {
             val intent = Intent(this, ListOfSubscribersActivity::class.java)
             startActivity(intent)
+        }
+
+        btn_back_to_menu.setOnClickListener {
+            finish()
         }
     }
 

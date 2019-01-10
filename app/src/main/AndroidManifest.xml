@@ -11,6 +11,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".controller.FirestoreActivity">
+        </activity>
+        <activity android:name=".controller.MainActivity">
+        </activity>
         <activity
                 android:name=".controller.ListOfSubscribersActivity"
                 android:label="@string/title_activity_list_of_subscribers"
@@ -20,7 +24,7 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="io.github.manuelernesto.thejourneyoffirebase.controller.MainActivity"/>
         </activity>
-        <activity android:name=".controller.MainActivity">
+        <activity android:name=".controller.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

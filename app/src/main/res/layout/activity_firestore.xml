@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_login"
-        tools:context=".controller.MainActivity">
+        tools:context=".controller.FirestoreActivity">
 
     <EditText
             android:textColor="@color/login_form_details"
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etName"
+            android:id="@+id/etName_firestore"
             android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="24dp"
@@ -26,7 +26,8 @@
             android:layout_marginLeft="24dp"
             android:hint="@string/name"
             app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/title"/>
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
 
     <EditText
             android:textColor="@color/login_form_details"
@@ -37,9 +38,9 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/etEmail"
+            android:id="@+id/etEmail_firestore"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etName"
+            app:layout_constraintTop_toBottomOf="@+id/etName_firestore"
             android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="24dp"
@@ -57,9 +58,9 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/etPhone"
+            android:id="@+id/etPhone_firestore"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail_firestore"
             android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="24dp"
@@ -74,7 +75,7 @@
             android:text="@string/subscribe"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_subscribe"
+            android:id="@+id/btn_subscribe_firestore"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
@@ -82,7 +83,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/etPhone"/>
+            app:layout_constraintTop_toBottomOf="@+id/etPhone_firestore"/>
 
     <Button
             android:background="@drawable/btn_bg"
@@ -90,7 +91,7 @@
             android:text="@string/see_subscribers"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_see_subscribe"
+            android:id="@+id/btn_see_subscribe_firestore"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
@@ -98,15 +99,14 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/btn_subscribe" android:layout_marginTop="8dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_subscribe_firestore" android:layout_marginTop="8dp"/>
     <Button
             android:background="@drawable/btn_bg"
             android:textColor="@color/login_form_details"
             android:text="@string/back_to_menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_back_to_menu"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btn_back_to_menu_firestore" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <ImageView
@@ -130,7 +130,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="@string/realtime_database"
+            android:text="@string/cloud_firestore"
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold"

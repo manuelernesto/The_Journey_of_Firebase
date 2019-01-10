@@ -10,4 +10,7 @@
     <string name="back_to_home">Back to home</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
+    <string name="realtime_database">Realtime Database 🔥</string>
+    <string name="cloud_firestore">Cloud Firestore 🔥</string>
+    <string name="back_to_menu">Back to Menu</string>
 </resources>
