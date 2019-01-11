@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
                 mPersonTable.addValueEventListener(valueEventListener)
 
             } else {
+                progressBarStyle.visibility = ProgressBar.INVISIBLE
                 Toast.makeText(this, "Please, fill all fields!", Toast.LENGTH_LONG).show()
             }
 

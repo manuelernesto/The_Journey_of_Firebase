@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.EditText
+import android.widget.ProgressBar
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.database.DatabaseReference
@@ -23,6 +24,8 @@ class ListOfSubscribersActivity : AppCompatActivity() {
     lateinit var person: DatabaseReference
     lateinit var viewHolder: FirebaseRecyclerAdapter<Person, PersonViewHolder>
 
+    lateinit var progressBarStyle: ProgressBar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_of_subscribers)
@@ -31,14 +34,17 @@ class ListOfSubscribersActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance()
         person = database.getReference("Person")
 
+//        progressBarStyle = findViewById(R.id.progressBar_firestore_list)
+//        progressBarStyle.visibility = ProgressBar.VISIBLE
+
         val manager = LinearLayoutManager(this)
         rv.layoutManager = manager
         rv.setHasFixedSize(true)
-        loadPerson()
+        loadPeople()
     }
 
 
-    private fun loadPerson() {
+    private fun loadPeople() {
         val personQuery = person.orderByKey()
 
         val personOption = FirebaseRecyclerOptions.Builder<Person>()
@@ -46,6 +52,7 @@ class ListOfSubscribersActivity : AppCompatActivity() {
 
         viewHolder = PersonRecyclerAdapter(options = personOption, context = this)
         rv.adapter = viewHolder
+
     }
 
     override fun onStart() {

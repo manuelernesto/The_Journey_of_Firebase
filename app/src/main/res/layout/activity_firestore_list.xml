@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:background="@drawable/bg_login"
         android:layout_height="match_parent"
-        tools:context=".controller.ListOfSubscribersActivity">
+        tools:context=".controller.FirestoreListActivity">
 
     <TextView
             android:textAlignment="center"
@@ -17,7 +17,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="@string/realtime_database"
+            android:text="@string/cloud_firestore"
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -52,7 +52,6 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ProgressBar
-            android:visibility="gone"
             style="?android:attr/progressBarStyle"
             android:layout_width="48dp"
             android:layout_height="48dp"

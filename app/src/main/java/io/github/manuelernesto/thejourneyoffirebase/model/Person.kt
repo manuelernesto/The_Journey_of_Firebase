@@ -1,6 +1,12 @@
 package io.github.manuelernesto.thejourneyoffirebase.model
 
-class Person() {
+import com.google.firebase.firestore.Exclude
+import java.io.Serializable
+
+class Person() : Serializable {
+
+    @Exclude
+    var id: String? = null
 
     lateinit var name: String
     lateinit var email: String
