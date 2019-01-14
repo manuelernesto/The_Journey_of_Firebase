@@ -15,3 +15,8 @@ This is the repository that i will use to share the code of
 - [ ] Cloud Storage
 - [ ] ML Kit
 - [ ] Cloud Functions
+
+### Thanks to
+
+[Kotlin](https://github.com/JetBrains/kotlin)
+[Firebase](https://github.com/firebase)
