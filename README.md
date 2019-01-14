@@ -18,5 +18,5 @@ This is the repository that i will use to share the code of
 
 ### Thanks to
 
-[Kotlin](https://github.com/JetBrains/kotlin)
-[Firebase](https://github.com/firebase)
+- [Kotlin](https://github.com/JetBrains/kotlin)
+- [Firebase](https://github.com/firebase)
