@@ -2,8 +2,8 @@ package io.github.manuelernesto.thejourneyoffirebase.controller
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.firestore.CollectionReference
@@ -11,8 +11,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import io.github.manuelernesto.thejourneyoffirebase.R
 import io.github.manuelernesto.thejourneyoffirebase.model.Person
 import kotlinx.android.synthetic.main.activity_firestore.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_update_firestore.*
 
 class FirestoreActivity : AppCompatActivity() {
 
@@ -47,6 +45,7 @@ class FirestoreActivity : AppCompatActivity() {
 
             val mPersonTable: CollectionReference = db.collection("Person")
             val person = Person(
+                null,
                 etName_firestore.text.toString(),
                 etEmail_firestore.text.toString(),
                 etPhone_firestore.text.toString()

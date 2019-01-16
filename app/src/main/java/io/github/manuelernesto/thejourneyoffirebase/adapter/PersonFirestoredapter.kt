@@ -17,8 +17,10 @@ class PersonFirestoredapter(private val context: Context, private val people: Li
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val layoutInflater = LayoutInflater.from(context)
-        val view = layoutInflater.inflate(R.layout.layout_list_subscribers, parent, false)
-
+        val view = layoutInflater.inflate(
+            R.layout.layout_list_subscribers,
+            parent, false
+        )
         return Holder(view, people, context)
     }
 
@@ -33,14 +35,20 @@ class PersonFirestoredapter(private val context: Context, private val people: Li
     }
 
 
-    class Holder(itemView: View, val people: List<Person>, val context: Context) : RecyclerView.ViewHolder(itemView),
+    class Holder(
+        itemView: View,
+        val people: List<Person>,
+        val context: Context
+    ) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
 
         val name: TextView = itemView.findViewById(R.id.list_name)
         val email: TextView = itemView.findViewById(R.id.list_email)
         val phone: TextView = itemView.findViewById(R.id.list_phone)
 
-        init {itemView.setOnClickListener(this)}
+        init {
+            itemView.setOnClickListener(this)
+        }
 
         override fun onClick(v: View?) {
             val person = people[adapterPosition]
@@ -48,7 +56,6 @@ class PersonFirestoredapter(private val context: Context, private val people: Li
             intent.putExtra("Person", person)
             context.startActivity(intent)
         }
-
 
     }
 }

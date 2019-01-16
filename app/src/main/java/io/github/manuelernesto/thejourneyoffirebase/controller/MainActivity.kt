@@ -2,7 +2,6 @@ package io.github.manuelernesto.thejourneyoffirebase.controller
 
 import android.content.Context
 import android.content.Intent
-import android.opengl.Visibility
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.ProgressBar
@@ -10,7 +9,6 @@ import android.widget.Toast
 import com.google.firebase.database.*
 import io.github.manuelernesto.thejourneyoffirebase.R
 import io.github.manuelernesto.thejourneyoffirebase.model.Person
-import kotlinx.android.synthetic.main.activity_firestore.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -42,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                             "This phone number already exist.".toast(this@MainActivity)
                         } else {
                             val person = Person(
+                                null,
                                 etName.text.toString(), etEmail.text.toString(), etPhone.text.toString()
                             )
 

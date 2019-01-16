@@ -1,10 +1,8 @@
 package io.github.manuelernesto.thejourneyoffirebase.controller
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.widget.ProgressBar
 import android.widget.Toast
@@ -40,12 +38,16 @@ class UpdateFirestoreActivity : AppCompatActivity() {
         progressBarStyle.visibility = ProgressBar.VISIBLE
         if (!validate()) {
             val person = Person(
+                null,
                 etName_firestore_update.text.toString(),
                 etEmail_firestore_update.text.toString(),
                 etPhone_firestore_update.text.toString()
             )
 
-            db.collection("Person").document(personExtra.id!!).set(person)
+            db.collection("Person").document(personExtra.id!!)
+                .set(person)
+//                .update("name", etName_firestore_update.text)
+
                 .addOnSuccessListener {
                     "Updated Successful.".toast(this@UpdateFirestoreActivity)
                     finish()

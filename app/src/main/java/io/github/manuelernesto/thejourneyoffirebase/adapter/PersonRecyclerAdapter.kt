@@ -89,7 +89,7 @@ class PersonRecyclerAdapter(var options: FirebaseRecyclerOptions<Person>, var co
 
     private fun update(phone: String, name: String, email: String) {
         var personTable: DatabaseReference = FirebaseDatabase.getInstance().getReference("Person").child(phone)
-        val person = Person(name, email, phone)
+        val person = Person(null, name, email, phone)
         personTable.setValue(person)
         "Updated successful!".toast(context)
     }

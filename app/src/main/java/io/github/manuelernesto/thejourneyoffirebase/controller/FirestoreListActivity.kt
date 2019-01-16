@@ -17,7 +17,7 @@ class FirestoreListActivity : AppCompatActivity() {
     lateinit var mAdapter: PersonFirestoredapter
     lateinit var mPeople: ArrayList<Person>
     lateinit var mRecyclerView: RecyclerView
-    private lateinit var db: FirebaseFirestore
+    lateinit var db: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +55,6 @@ class FirestoreListActivity : AppCompatActivity() {
                 }
                 mAdapter.notifyDataSetChanged()
             }
-
         }
     }
 
